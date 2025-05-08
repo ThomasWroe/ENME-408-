@@ -28,11 +28,13 @@ This project involves a conveyor belt system equipped with sensors and a robotic
 - `rospy`
 - `rosserial_python`
 
-### Arduino Script
+### Arduino Software
 - Arduino IDE
 - `rosserial_arduino` library
 
 ### Supplementary ROS Packages
 Install via terminal:
-```bash
 sudo apt install ros-noetic-rosserial ros-noetic-rosserial-arduino ros-noetic-rosserial-python
+
+### Arduino Wiring Diagram 
+![Arduino Wiring Diagram](https://github.com/user-attachments/assets/ebd2cf71-676a-4389-b424-fa3caf27992b)
