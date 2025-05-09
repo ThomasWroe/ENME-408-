@@ -474,19 +474,10 @@ def main():
 
     # Print instructions
     rospy.loginfo("Press Enter to record the Locations In the Following order")
-    rospy.loginfo("Cube: Blue, Red, Green Yellow, Orange, Purple")
+    rospy.loginfo("Cube: Blue, Red, Green, Yellow, Orange, Purple")
     rospy.loginfo("Sphere: Blue, Green, Purple, Orange")
     recorded_angles = record_joint_angles()
-    limb.move_to_neutral()
-    # STEP 1: Record positions
-    # record_positions()
-    # i = 1
-    # for value in pose_variables.values():
-    #     print('pose{}'.format(i), ':', value)
-    #     i += 1
-    # time.sleep(1)
-    # Move to start position
-    
+    limb.move_to_neutral()    
 
     keypress = intera_external_devices.getch()
     while keypress != 'c':
@@ -496,7 +487,6 @@ def main():
         condition = ''
         color_name = ''
         
-
         # Move to start position
         
         move_to_joint_angles(Start_position)
