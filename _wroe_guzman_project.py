@@ -168,43 +168,6 @@ def detect_shapes_from_camera():
     except Exception as e:
         rospy.logerr(f"Error during shape detection: {e}")
         return False
-        
-# def record_positions():
-#     """
-#     Records the end effector's positions and orientations when 'a' is pressed.
-#     Stops recording when 'q' is pressed.
-#     """
-#     global limb, pose_variables, counter, recording_active
-
-#     while not rospy.is_shutdown() and recording_active:
-#         rospy.loginfo("Press 'a' to record, 'q' to quit.")
-#         key = intera_external_devices.getch()  # Get key press
-
-#         if key is None:
-#             # Skip this iteration and wait for a valid key press
-#             continue
-
-#         key = key.strip().lower()  # Clean the key press
-
-#         # Validate the key press
-#         if key == 'a':
-#             # Record the end effector's position and orientation
-#             pose = limb.endpoint_pose()
-#             position = pose['position']
-#             orientation = pose['orientation']
-#             variable_name = f"pose_{counter}"
-#             pose_variables[variable_name] = {
-#                 'position': (position.x, position.y, position.z),
-#                 'orientation': (orientation.x, orientation.y, orientation.z, orientation.w),
-#             }
-#             rospy.loginfo(f"Recorded {variable_name}: Position: {position}, Orientation: {orientation}")
-#             counter += 1
-#         elif key == 'q':
-#             rospy.loginfo("Exiting recording loop.")
-#             recording_active = False
-#         else:
-#             rospy.loginfo(f"Invalid input: {repr(key)}. Press 'a' to record, 'q' to quit.")
-
 
 def record_joint_angles():
     """
