@@ -257,14 +257,6 @@ def move_to_joint_angles(joint_angles):
 
     print("Movement complete.")
 
-        
-import numpy as np
-from cv_bridge import CvBridge, CvBridgeError
-from collections import deque
-import rospy
-from sensor_msgs.msg import Image
-import cv2
-import intera_interface
 
 def camera_color_detector():
     """
